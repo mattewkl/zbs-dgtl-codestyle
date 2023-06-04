@@ -1,0 +1,58 @@
+
+//переменные: сamelCase
+
+//переменные размера - назначение(например - title, subtitle) стиль(font-size), размер для стиля большими буквами. В неповторяемых местах приемлимо использование просто величины.   
+$subtitleFontSizeXS: 14px
+$titleFontSizeS: 18px
+
+$subtitleLineHeightXS: 1.15
+$titleLineHeightS: 1.30
+
+//переменные цвета - color + Именование ex:BaseText TitleText BaseBackround FooterBackground || Обозначение цвета ex: Blue01 Red02 Pink03
+
+$colorBaseText: #222222 
+$coloreYellow02: #FEC20C
+
+
+//для обнулений используйте наследование %resetStyle, для ресетов где может использоваться цвет или переменные - миксины =resetStyle($variable)
+
+%resetMarginPadding 
+  margin: 0
+  padding: 0
+
+
+%resetListStyle
+  list-style-type: none
+  list-style: none
+
+=resetLinkStyle($variable)
+  color: $variable
+  text-transform: none
+  &:visited 
+    color: $variable
+
+
+
+//сами стили пишем по БЭМ. Основы - блоки, то что можно переиспользовать и вкладывать друг в друга, соответственно у них нет своих отступов(кроме разве-что нижних, для блоков секций), они никак не влияют на внешнюю геометрию. 
+//название с маленькой буквы, вместо пробела один -
+
+.header 
+  @extend %resetMarginPadding
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center 
+  //элементы, неотделимые от блока описываются в блоке и называются &__название-элемента
+  &__title 
+    @extend %resetMarginPadding
+    font-size: $titleFontSizeS
+    line-height: $titleLineHeightS
+
+//Блоки которые ЗАВЕДОМО переиспользуются или вы в процессе выяснили что они типовые и используются с минимальными измененеиями - начинать с reusable
+
+.reusable-button
+  @extend %resetMarginPadding
+  border: 1px solid
+  // модификаторы в том же блоке через &_
+  &_yellow-border
+    border-color: $coloreYellow02

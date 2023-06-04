@@ -1,0 +1,24 @@
+.reusable-button, .header__title, .header {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__title {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.reusable-button {
+  border: 1px solid;
+}
+.reusable-button_yellow-border {
+  border-color: #FEC20C;
+}
+
+/*# sourceMappingURL=style.css.map */
