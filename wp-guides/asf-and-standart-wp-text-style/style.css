@@ -1,0 +1,64 @@
+.test-standart-text, .test-acf-content-container-01 ol li, .test-acf-content-container-01 p, .test-content-container-01 ol li, .test-content-container-01 p, .test-standart-link, .test-acf-content-container-01 a, .test-content-container-01 a {
+  font-size: 20px;
+  line-height: 22px;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.test-standart-section-title, .test-acf-content-container-01 h2, .test-content-container-01 h2 {
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.test-standart-link, .test-acf-content-container-01 a, .test-content-container-01 a {
+  color: aquamarine;
+}
+
+.test-standart-link:hover, .test-acf-content-container-01 a:hover, .test-content-container-01 a:hover {
+  color: darkcyan;
+}
+
+.test-content-container-01 {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.test-content-container-01 a:hover {
+  color: darkcyan;
+}
+
+.test-content-container-01 ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.test-content-container-01 strong {
+  color: darkmagenta;
+}
+
+.test-acf-content-container-01 {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.test-content-container-01 a:hover {
+  color: darkcyan;
+}
+
+.test-acf-content-container-01 ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.test-acf-content-container-01 strong {
+  color: darkmagenta;
+}
+
+/*# sourceMappingURL=style.css.map */

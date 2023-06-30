@@ -1,0 +1,106 @@
+.test-standart-text
+  font-size: 20px
+  line-height: 22px
+  color: black
+  margin: 0
+  padding: 0
+
+.test-standart-section-title
+  font-size: 30px
+  line-height: 36px
+  margin: 0
+  padding: 0
+
+.test-standart-link
+  @extend .test-standart-text
+  color: aquamarine
+
+.test-standart-link:hover
+  color: darkcyan
+
+//наверху - стандартные стили текстов для этого примера. Пишем ВСЕГДА на препах, потому что это БЫСТРЕЕ. ЗНАЧИТЕЛЬНО. Если вам не нравится или вы пишете с копилотом - ваше право, но я искренне рекомендую писать на препах
+
+.test-content-container-01
+  //здесь мы описываем просто поведение контейнера, а так же обращаем внимание на GAP в контейнере, потому что как правило это будет флекс.
+  //не рекомендую делать отступы через марджины и паддинги вложенных элементов без крайней необходимости, очень легко запутаться
+  display: flex
+  gap: 20px
+  flex-direction: column
+
+.test-content-container-01 h2
+  //тут мы описываем заголовок. Они выбираются специально в необходимых графах. Используйте заголовки соответственно семантике.
+  //как правило заголовок h1 всего один на странице, h2 используют для секций, h3 для артиклов, 4 5 и 6 как правило избегают
+  //здесь мы хотим просто такой же стиль как у обычного заголовка секций
+  @extend .test-standart-section-title
+
+.test-content-container-01 a
+  //описание ссылки. НЕ ЗАБЫВАТЬ ДОБАВЛЯТЬ ХАВЕРА ЕСЛИ ОНИ ЕСТЬ
+  @extend .test-standart-link
+
+.test-content-container-01 a:hover
+  color: darkcyan
+
+.test-content-container-01 p
+  //обычный текстовый блок как правило оборачивается в p
+  @extend .test-standart-text
+
+.test-content-container-01 ol
+  //описание нумерованного списка
+  display: flex
+  flex-direction: column
+  gap: 0
+
+.test-content-container-01 ol li
+  //описание элемента нумерованного списка. По аналогии делаются и ненумерованные
+  @extend .test-standart-text
+
+.test-content-container-01 strong
+  //стронг используется движком wp и acf для функции ЖИРНЫЙ. Как правило ее следует использовать для задач выделения текста фирменным цветом
+  color: darkmagenta
+
+//далее вы можете написать свои стили для контейнера 2
+
+
+
+//контейнер для вывода ASF поля, стилизован так же, описания те же, там где совпадает.
+
+.test-acf-content-container-01
+  //здесь мы описываем просто поведение контейнера, а так же обращаем внимание на GAP в контейнере, потому что как правило это будет флекс.
+  //не рекомендую делать отступы через марджины и паддинги вложенных элементов без крайней необходимости, очень легко запутаться
+  display: flex
+  gap: 20px
+  flex-direction: column
+
+.test-acf-content-container-01  h2
+  //тут мы описываем заголовок. Они выбираются специально в необходимых графах. Используйте заголовки соответственно семантике.
+  //как правило заголовок h1 всего один на странице, h2 используют для секций, h3 для артиклов, 4 5 и 6 как правило избегают
+  //здесь мы хотим просто такой же стиль как у обычного заголовка секций
+  @extend .test-standart-section-title
+
+.test-acf-content-container-01  a
+  //описание ссылки. НЕ ЗАБЫВАТЬ ДОБАВЛЯТЬ ХАВЕРА ЕСЛИ ОНИ ЕСТЬ
+  @extend .test-standart-link
+
+.test-content-container-01 a:hover
+  color: darkcyan
+
+.test-acf-content-container-01  p
+  //обычный текстовый блок как правило оборачивается в p
+  @extend .test-standart-text
+
+.test-acf-content-container-01  ol
+  //описание нумерованного списка
+  display: flex
+  flex-direction: column
+  gap: 0
+
+.test-acf-content-container-01 ol li
+  //описание элемента нумерованного списка. По аналогии делаются и ненумерованные
+  @extend .test-standart-text
+
+.test-acf-content-container-01  strong
+  //стронг используется движком wp и acf для функции ЖИРНЫЙ. Как правило ее следует использовать для задач выделения текста фирменным цветом
+  color: darkmagenta
+
+//место чтобы попробовать свои стили со вторым контейнером
+
